@@ -2,11 +2,16 @@ import './App.css';
 import {useEffect, useState} from 'react'
 import axios from 'axios'
 
+// components
+import Forecast from './components/Forecast'
+import BirdHouse from './components/BirdHouse'
+
 function App() {
 
-const [location, setLocation] = useState("2092 Avenue Road, Toronto Canada")
+const [location, setLocation] = useState("Toronto")
 const [birdsArray, setBirdsArray] = useState([])
 const [weather, setWeather] = useState([])
+const [toggle, setToggle] = useState(false)
 
 useEffect(() => {
 // STEP 1 - Location API Call for Lat & Long
@@ -103,12 +108,32 @@ axios(configSplash)
 }
 // getUnsplash()
 
-}, [])
+}, [toggle])
 
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    setToggle(!toggle)
+    console.log('switched')
+  }
 
   return (
     <div className="App">
-     
+      <form onSubmit={handleSubmit}>
+      <label>Enter your address:
+        <input 
+          type="text" 
+          value={location}
+          onChange={(e) => setLocation(e.target.value)}
+        />
+      </label>
+      <input type="submit" />
+    </form>
+     <BirdHouse 
+     birdsArray={birdsArray}
+     />
+     <Forecast 
+     weather={weather}
+     />
     </div>
   );
 }
