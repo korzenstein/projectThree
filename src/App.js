@@ -1,4 +1,4 @@
-import './App.css';
+import './styles/styles.css';
 import {useEffect, useState} from 'react'
 import axios from 'axios'
 
@@ -56,7 +56,7 @@ const configBird = {
         key:
         'kmbrhsdgnjs1', 
         dist: 10,
-        maxResults: 10,
+        maxResults: 6,
   }
 };
 
@@ -117,8 +117,9 @@ axios(configSplash)
   }
 
   return (
-    <div className="App">
-      <form onSubmit={handleSubmit}>
+    <main className="main">
+      <div className="wrapper">
+      <form onSubmit={handleSubmit} className="form">
       <label>Enter your address:
         <input 
           type="text" 
@@ -128,13 +129,14 @@ axios(configSplash)
       </label>
       <input type="submit" />
     </form>
-     <BirdHouse 
-     birdsArray={birdsArray}
-     />
      <Forecast 
      weather={weather}
      />
-    </div>
+     <BirdHouse 
+     birdsArray={birdsArray}
+     />
+     </div>
+    </main>
   );
 }
 

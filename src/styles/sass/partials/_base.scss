@@ -1,0 +1,36 @@
+.main {
+    background-color: grey;
+    width: 100%;
+    height: 100vh;
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        margin: 0 auto;
+        max-width: 1280px;
+        width: 80%;
+
+    }
+}
+
+.birdhouseContainer {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.birdCard {
+    background-color: turquoise;
+    width: calc(100% / 10);
+}
+
+.weatherContainer {
+    align-self: flex-end;
+}
+
+.form {
+    background-color: rgb(252, 176, 176);
+}

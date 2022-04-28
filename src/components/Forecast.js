@@ -1,6 +1,6 @@
 const Forecast = ({weather}) => {
     return (
-        <div>
+        <div className="weatherContainer">
             <h4>Current Weather</h4>
             <p>{Math.round((weather.main.temp)-273.15)} C</p>
             <p>{weather.name}</p>

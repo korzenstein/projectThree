@@ -1,7 +1,6 @@
 const BirdHouse = ({birdsArray}) => {
     return (
         <div className="birdhouseContainer">
-            <h4>Future Bird House Collection</h4>
             {
                 birdsArray.map(bird => {
                     return (
