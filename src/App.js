@@ -10,9 +10,8 @@ function App() {
   const [location, setLocation] = useState("Toronto");
   const [birdsArray, setBirdsArray] = useState([]);
   const [weather, setWeather] = useState({ loading: false });
-  const [pexImage, setPexImage] = useState([]);
   const [toggle, setToggle] = useState(false);
-  const [imageArray, setImageArray] = useState([]);
+  
 
   useEffect(() => {
     // STEP 1 - Location API Call for Lat & Long
@@ -60,24 +59,23 @@ function App() {
       axios(configBird)
         .then(function (response) {
           // setBirdsArray(response.data);
-    
           const birdData = [
-            response.data[0].comName,
-            response.data[1].comName,
-            response.data[2].comName,
-            response.data[3].comName,
-            response.data[4].comName,
+            response.data[0],
+            response.data[1],
+            response.data[2],
+            response.data[3],
+            response.data[4],
           ]
           
 
           const fetchImages = async () => {
             try {
               const res = await Promise.allSettled([
-                getPexel(birdData[0]),
-                getPexel(birdData[1]),
-                getPexel(birdData[2]),
-                getPexel(birdData[3]),
-                getPexel(birdData[4]),
+                getPexel(`${birdData[0].comName} bird`),
+                getPexel(`${birdData[1].comName} bird`),
+                getPexel(`${birdData[2].comName} bird`),
+                getPexel(`${birdData[3].comName} bird`),
+                getPexel(`${birdData[4].comName} bird`),
               ]);
               const pexelData = res.map((res) => {
                 // console.log(res.value.data.photos[0])
@@ -156,6 +154,7 @@ function App() {
   return (
     <main className="main">
       <div className="wrapper">
+        <Forecast weather={weather} />
         <form onSubmit={handleSubmit} className="form">
           <label>
             Enter your address:
@@ -167,7 +166,7 @@ function App() {
           </label>
           <input type="submit" />
         </form>
-        <Forecast weather={weather} />
+        
         <BirdHouse birdsArray={birdsArray} toggle={toggle} />
       </div>
     </main>

@@ -316,6 +316,33 @@ html {
       -ms-flex-direction: column;
           flex-direction: column;
   border-radius: 10px;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-animation: opacity 1s ease-in;
+          animation: opacity 1s ease-in;
+  scale: 1;
+}
+.birdCard :hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+@-webkit-keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .birdImage {
@@ -336,9 +363,18 @@ html {
 
 .form {
   background-color: rgb(252, 176, 176);
+  margin-bottom: 3rem;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
 }
 
 img {
   display: block;
   width: 100%;
+}
+
+.enlarger {
+  background-color: red;
+  -webkit-transform: scale(4);
+          transform: scale(4);
 }
