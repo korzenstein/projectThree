@@ -1,22 +1,13 @@
-const BirdHouse = ({birdsArray, toggle}) => {
+import Birds from './Birds'
 
-    return (
-        <div className="birdhouseContainer">
-            {
-                // birdsArray[0].birdybirdy.map(bird => {
-                //     return (
-                //         <div className="birdCard">
-                //             <p>Help</p>
-                //             {/* <img
-                //             src={bird.promiseData[0].src.portrait}
-                //             /> */}
+const BirdHouse = ({ birdsArray, toggle }) => {
+  return (
+    <div className="birdhouseContainer">
+      <Birds 
+      birdsArray={birdsArray}
+      />
+    </div>
+  );
+};
 
-                //         </div>
-                //     )
-                // })
-            }
-        </div>
-    )
-}
-
-export default BirdHouse
+export default BirdHouse;

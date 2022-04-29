@@ -79,25 +79,13 @@ function App() {
                 getPexel(birdData[3]),
                 getPexel(birdData[4]),
               ]);
-              const promiseData = res.map((res) => {
+              const pexelData = res.map((res) => {
+                // console.log(res.value.data.photos[0])
                 return res.value.data.photos[0]
               });
 
-              // const finalData = birdData.map((bird) => {
-              //   return {
-              //     bird, promiseData
-              //   } 
-              // })
-
-              const finalData = promiseData.map(prom => {
-                return {
-                  ...prom, birdybirdy: birdData
-                }
-              })
-
-
-
-              // console.log(finalData)
+              const finalData = birdData.map((v, i) => ({ v, ...pexelData[i] }));
+   
               setBirdsArray(finalData)
               console.log(birdsArray)
             } catch {

@@ -25,11 +25,26 @@
     width: 100%;
     justify-content: space-between;
     align-items: center;
+    gap: 1rem;
 }
 
 .birdCard {
     background-color: turquoise;
-    width: calc(100% / 10);
+    width: calc(100% / 5);
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.birdImage {
+    width: 100%;
+    border-top-left-radius: 10px;
+}
+
+.birdTitle {
+    height: 40px;
+    font-size: 1rem;
+    text-align: center;
 }
 
 .weatherContainer {
