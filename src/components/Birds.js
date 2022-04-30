@@ -1,38 +1,33 @@
-import {useState} from 'react'
+import { useState } from "react";
 
-const Birds = ({birdsArray}) => {
+const Birds = ({ birdsArray }) => {
+  const [clicked, setClicked] = useState();
 
-  const [enlarge, setEnlarge] = useState(false)
-  const handleEnlarge = () => {
-    setEnlarge(!enlarge)
-  }
+  const handleIndex = (index) => {
+    setClicked(index);
+  };
 
+  return (
+    <>
+      {birdsArray.map((bird, index) => {
+        return (
+          <div
+            className={index === clicked ? "birdCard position" : "birdCard"}
+            onClick={() => handleIndex(index)}
+            key={index}
+          >
+            <img className="birdImage" src={bird.src.portrait} alt={bird.alt} />
 
-
-    return (
-        <>
-        {birdsArray.map((bird) => {
-          return (
-            <div 
-            // className="birdCard opacity" 
-            className={enlarge ? 
-              "birdCard enlarger opacity" : 
-              "birdCard opacity"}
-            onClick={handleEnlarge}
-            key={bird.id}>
-              <img className="birdImage" 
-              src={bird.src.portrait} 
-              alt={bird.alt}
-              />
-              <p className="birdTitle">{bird.v.comName}</p>
-              <p>{bird.v.locName}</p>
-              <p>{bird.v.sciName}</p>
+            <p className="birdTitle">{bird.v.comName}</p>
+            <div className="subTitle">
+              <p className="birdLocation">{bird.v.locName}</p>
+              <p className="birdSci">{bird.v.sciName}</p>
             </div>
-          );
-        })}
-        
-      </>
-    )
-}
+          </div>
+        );
+      })}
+    </>
+  );
+};
 
-export default Birds
+export default Birds;

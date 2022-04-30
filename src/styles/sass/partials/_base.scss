@@ -1,87 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 .main {
-    background-image: url(../assets/robin.jpg);
-    background-repeat: no-repeat;
-    background-position: cover;
-    background-size: cover;
     transition: all 0.5s ease-in-out;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     overflow: hidden;
     .wrapper {
         display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
         height: 100%;
         margin: 0 auto;
-        max-width: 1280px;
-        width: 80%;
-
+        max-width: 1380px;
+        width: 100%;
     }
 }
 
-.birdhouseContainer {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1rem;
-}
-
-.birdCard {
-    background-color: turquoise;
-    width: calc(100% / 5);
-    display: flex;
-    flex-direction: column;
-    border-radius: 10px;
-    transition: all 0.5s ease-in-out;
-    animation: opacity 1s ease-in;
-    scale: 1;
-
-    :hover{
-        opacity: 0.8;
-        cursor: pointer;
+h1 {
+    span {
+        display: block;
     }
-}
-
-.opacity {
-    @keyframes opacity {
-        0% {
-            opacity: 0;
-        }
-        100% {
-            opacity: 1;
-        }
-    }
-}
-
-.birdImage {
-    width: 100%;
-    border-top-left-radius: 10px;
-}
-
-.birdTitle {
-    height: 40px;
-    font-size: 1rem;
-    text-align: center;
-}
-
-.weatherContainer {
-    align-self: flex-end;
-}
-
-.form {
-    background-color: rgb(252, 176, 176);
-    margin-bottom: 3rem;
-    align-self: flex-start;
-}
-
-img {
-    display: block;
-    width: 100%;
-}
-
-.enlarger {
-    background-color: red;
-    transform: scale(4);
 }

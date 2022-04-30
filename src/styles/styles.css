@@ -260,14 +260,15 @@ html {
   overflow: hidden;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .main {
-  background-image: url(../assets/robin.jpg);
-  background-repeat: no-repeat;
-  background-position: cover;
-  background-size: cover;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   overflow: hidden;
 }
@@ -275,20 +276,14 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   height: 100%;
   margin: 0 auto;
-  max-width: 1280px;
-  width: 80%;
+  max-width: 1380px;
+  width: 100%;
+}
+
+h1 span {
+  display: block;
 }
 
 .birdhouseContainer {
@@ -296,18 +291,17 @@ html {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 1rem;
+  height: 100%;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  margin: 0;
+  padding: 0;
+  -webkit-transition: all 0.9s ease-in-out;
+  transition: all 0.9s ease-in-out;
 }
 
 .birdCard {
-  background-color: turquoise;
-  width: 20%;
+  background-color: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -315,16 +309,28 @@ html {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  border-radius: 10px;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.9s ease-in-out;
+  transition: all 0.9s ease-in-out;
   -webkit-animation: opacity 1s ease-in;
           animation: opacity 1s ease-in;
-  scale: 1;
+  width: 20%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: relative;
+  color: rgba(0, 0, 0, 0);
 }
 .birdCard :hover {
   opacity: 0.8;
   cursor: pointer;
+}
+
+.position {
+  -webkit-transition: all 0.9s ease-in-out;
+  transition: all 0.9s ease-in-out;
+  width: 50%;
+  background-color: white;
+  color: rgb(0, 0, 0);
 }
 
 @-webkit-keyframes opacity {
@@ -347,18 +353,38 @@ html {
 
 .birdImage {
   width: 100%;
-  border-top-left-radius: 10px;
+  display: block;
+  height: auto;
 }
 
 .birdTitle {
-  height: 40px;
+  position: absolute;
   font-size: 1rem;
-  text-align: center;
+  width: 100%;
+  opacity: 1;
+  -webkit-transform: translateX(1px);
+          transform: translateX(1px);
+  background-color: white;
+  color: rgb(0, 0, 0);
+  -webkit-transition: all 0.9s ease-in-out;
+  transition: all 0.9s ease-in-out;
+}
+
+.subTitle {
+  position: absolute;
+  background-color: inherit;
+  opacity: 1;
+  bottom: 0;
+  right: 0;
+  color: inherit;
+  -webkit-transition: all 0.9s ease-in-out;
+  transition: all 0.9s ease-in-out;
 }
 
 .weatherContainer {
   -ms-flex-item-align: end;
       align-self: flex-end;
+  position: absolute;
 }
 
 .form {
@@ -366,15 +392,5 @@ html {
   margin-bottom: 3rem;
   -ms-flex-item-align: start;
       align-self: flex-start;
-}
-
-img {
-  display: block;
-  width: 100%;
-}
-
-.enlarger {
-  background-color: red;
-  -webkit-transform: scale(4);
-          transform: scale(4);
+  position: absolute;
 }

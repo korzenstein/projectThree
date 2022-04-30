@@ -7,12 +7,12 @@ import Forecast from "./components/Forecast";
 import BirdHouse from "./components/BirdHouse";
 
 function App() {
-  const [location, setLocation] = useState("Toronto");
+  const [location, setLocation] = useState("100 Queen St W, Toronto Canada");
   const [birdsArray, setBirdsArray] = useState([]);
   const [weather, setWeather] = useState({ loading: false });
-  const [toggle, setToggle] = useState(false);
+  const [toggleApi, setToggleApi] = useState(false);
   
-
+  // UseEffect API Calls for all data
   useEffect(() => {
     // STEP 1 - Location API Call for Lat & Long
     const configLocale = {
@@ -96,12 +96,12 @@ function App() {
           console.log(error);
         });
     };
-
     // 563492ad6f9170000100000164e2845cbb41412ea75d4386889a4b2b
+    // 563492ad6f91700001000001c6c2def7324b4e4d8e07033d45546233
    
     // Pexel Image API call
     const getPexel = (term) => {
-      const APIkey = "563492ad6f91700001000001c6c2def7324b4e4d8e07033d45546233";
+      const APIkey = "563492ad6f9170000100000164e2845cbb41412ea75d4386889a4b2b";
       const configPexel = {
         method: "get",
         url: `https://api.pexels.com/v1/search`,
@@ -144,18 +144,20 @@ function App() {
         });
     };
 
-  }, [toggle]);
+  }, [toggleApi]);
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    setToggle(!toggle);
+    setToggleApi(!toggleApi);
   };
 
   return (
     <main className="main">
       <div className="wrapper">
         <Forecast weather={weather} />
-        <form onSubmit={handleSubmit} className="form">
+        <section className="form">
+        <form 
+        onSubmit={handleSubmit} >
           <label>
             Enter your address:
             <input
@@ -165,9 +167,11 @@ function App() {
             />
           </label>
           <input type="submit" />
-        </form>
-        
-        <BirdHouse birdsArray={birdsArray} toggle={toggle} />
+        </form> 
+        <h4>Hello Birders!</h4>
+        <p>Find local birds in your neighbourhood by putting in your address.</p>
+        </section>
+        <BirdHouse birdsArray={birdsArray}  />
       </div>
     </main>
   );
