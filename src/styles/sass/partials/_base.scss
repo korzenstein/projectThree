@@ -8,17 +8,38 @@
     width: 100vw;
     height: 100vh;
     overflow: hidden;
+    background-color: #fef9f5;
     .wrapper {
         display: flex;
-        height: 100%;
+        flex-direction: column;
+        justify-content: space-between;
+        // height: 80%;
         margin: 0 auto;
         max-width: 1380px;
-        width: 100%;
+        width: 85%;
+        position: relative;
+        // padding: 3rem 0;
     }
 }
 
 h1 {
+    text-transform: uppercase;
+    font-size: 3rem;
+    margin: 0;
+    span {
+        display: block;
+        color: #f16632;
+    }
+}
+
+p {
     span {
         display: block;
     }
+}
+
+.topContainer {
+    display: flex;
+    justify-content: space-between;
+    height: 35vh;
 }

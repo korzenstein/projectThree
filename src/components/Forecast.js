@@ -17,8 +17,6 @@ const Forecast = ({ weather }) => {
 
   return (
     <div className="weatherContainer">
-      <h4>Current Weather</h4>
-
       {weather.loading ? (
         <>
           <p>{Math.round(weather.main.temp - 273.15)} C</p>

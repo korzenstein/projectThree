@@ -1,0 +1,23 @@
+@media (max-width: 800px) {
+
+    .main {
+        overflow-y: visible;
+        .wrapper {
+            width: 90%;
+
+        }
+    }
+
+    .birdhouseContainer {
+        // overflow-x: auto;
+        // scroll-snap-type: x mandatory;
+        scroll-behavior: touch;
+        flex-wrap: wrap;
+    }
+
+    .birdCard {
+        width: 100%;
+    }
+
+    
+}

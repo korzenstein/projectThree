@@ -1,4 +1,12 @@
 .weatherContainer {
     align-self: flex-end;
-    position: absolute;
+    // position: absolute;
+    z-index: 20;
+    top: 0;
+    right: 0;
+    font-size: 2.2rem;
+    color: black;
+    text-align: right;
+    margin-top: 1rem;
 }
+

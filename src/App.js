@@ -154,24 +154,34 @@ function App() {
   return (
     <main className="main">
       <div className="wrapper">
-        <Forecast weather={weather} />
+        <div class="topContainer">
+        
         <section className="form">
         <form 
         onSubmit={handleSubmit} >
           <label>
-            Enter your address:
-            <input
+            <input 
               type="text"
+              className="search"
               value={location}
               onChange={(e) => setLocation(e.target.value)}
             />
           </label>
-          <input type="submit" />
+          <input 
+          className="submit"
+          type="submit" />
         </form> 
-        <h4>Hello Birders!</h4>
-        <p>Find local birds in your neighbourhood by putting in your address.</p>
+        <h1>Birds in Your <span>Backyard</span></h1>
+        <p>Find local and migratory birds in your neighbourhood
+          <span> with your address and get birding.</span></p>
         </section>
+        <Forecast weather={weather} />
+        </div>
         <BirdHouse birdsArray={birdsArray}  />
+        <span className="buttons">
+        <button> L </button>
+        <button> R </button>
+        </span>
       </div>
     </main>
   );
