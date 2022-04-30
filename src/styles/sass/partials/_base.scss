@@ -4,6 +4,7 @@
 }
 
 .main {
+    font-size: 125%;
     transition: all 0.5s ease-in-out;
     width: 100vw;
     height: 100vh;
@@ -12,9 +13,9 @@
     .wrapper {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: center;
         // height: 80%;
-        margin: 0 auto;
+        margin: 1.5rem auto;
         max-width: 1380px;
         width: 85%;
         position: relative;
@@ -42,4 +43,5 @@ p {
     display: flex;
     justify-content: space-between;
     height: 35vh;
+    align-items: center;
 }

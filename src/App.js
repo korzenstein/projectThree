@@ -7,7 +7,7 @@ import Forecast from "./components/Forecast";
 import BirdHouse from "./components/BirdHouse";
 
 function App() {
-  const [location, setLocation] = useState("100 Queen St W, Toronto Canada");
+  const [location, setLocation] = useState("Toronto");
   const [birdsArray, setBirdsArray] = useState([]);
   const [weather, setWeather] = useState({ loading: false });
   const [toggleApi, setToggleApi] = useState(false);
@@ -15,28 +15,29 @@ function App() {
   // UseEffect API Calls for all data
   useEffect(() => {
     // STEP 1 - Location API Call for Lat & Long
-    const configLocale = {
+   const configLocale = {
       method: "get",
-      url: `http://api.positionstack.com/v1/forward`,
+      url: `https://api.openweathermap.org/geo/1.0/direct`,
       params: {
-        access_key: "d8801a309d70e704b6f58e27f167e2e6",
-        query: location,
+        appid: '61ff2ff2a45475c0d60c3ba5c2a56d10',
+        q: location,
       },
     };
 
     axios(configLocale)
       .then(function (response) {
-        const results = response.data.data[0];
+        const results = response.data[0]
         getLocation(results);
       })
+
       .catch(function (error) {
         console.log(error);
       });
 
     // Function to get location
     const getLocation = (data) => {
-      let latitude = data.latitude.toFixed(2);
-      let longitude = data.longitude.toFixed(2);
+      let latitude = data.lat.toFixed(2);
+      let longitude = data.lon.toFixed(2);
   
       // STEP 2 - birdCall function
       birdCall(latitude, longitude);
@@ -178,10 +179,7 @@ function App() {
         <Forecast weather={weather} />
         </div>
         <BirdHouse birdsArray={birdsArray}  />
-        <span className="buttons">
-        <button> L </button>
-        <button> R </button>
-        </span>
+       <footer>Stephen Korzenstein / Juno College 2022</footer>
       </div>
     </main>
   );
