@@ -53,7 +53,7 @@ function App() {
         params: {
           key: "kmbrhsdgnjs1",
           dist: 10,
-          maxResults: 5,
+          maxResults: 6,
         },
       };
 
@@ -66,6 +66,7 @@ function App() {
             response.data[2],
             response.data[3],
             response.data[4],
+            response.data[5],
           ]
           
 
@@ -77,6 +78,7 @@ function App() {
                 getPexel(`${birdData[2].comName} bird`),
                 getPexel(`${birdData[3].comName} bird`),
                 getPexel(`${birdData[4].comName} bird`),
+                getPexel(`${birdData[5].comName} bird`),
               ]);
               const pexelData = res.map((res) => {
                 // console.log(res.value.data.photos[0])
@@ -138,6 +140,7 @@ function App() {
       axios(configWeath)
         .then(function (response) {
           const data = { ...response.data, loading: true };
+          console.log(data)
           setWeather(data);
         })
         .catch(function (error) {
@@ -174,12 +177,12 @@ function App() {
         </form> 
         <h1>Birds in Your <span>Backyard</span></h1>
         <p>Find local and migratory birds in your neighbourhood
-          <span> with your address and get birding.</span></p>
+          <span> with your city name - let's get birding.</span></p>
         </section>
         <Forecast weather={weather} />
         </div>
         <BirdHouse birdsArray={birdsArray}  />
-       <footer>Stephen Korzenstein / Juno College 2022</footer>
+       <footer className="footer"><p>Stephen Korzenstein / Juno College 2022</p></footer>
       </div>
     </main>
   );

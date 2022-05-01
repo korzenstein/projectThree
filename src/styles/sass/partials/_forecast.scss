@@ -1,10 +1,29 @@
 .weatherContainer {
     margin: 0;
-    // position: absolute;
-    
+    padding: 0.1rem;
+    display: flex;
+    flex-direction: column;
     font-size: 1.5rem;
     color: black;
     text-align: right;
     // margin-top: 1rem;
+
+    .winds {
+        font-size: 0.85rem;
+        margin-top: 0.4rem;
+    }
+
+    .weatherIcon {
+        position: relative;
+        height: 3rem;
+        width: 3rem;
+        align-self: end;
+
+        img {
+            position: absolute;
+            left: -1.5rem;
+            top: -2.3rem;
+        }
+    }
 }
 

@@ -1,4 +1,30 @@
-@media (max-width: 800px) {
+@media (max-width: 880px) {
+
+    .main {
+        overflow-y: visible;
+    }
+
+    .birdhouseContainer {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        height: 100%;
+    }
+
+    .birdCard {
+        width: calc((100% / 3) - 1rem);
+    }
+    
+    .footer {
+        position: static;
+    }
+
+    .position {
+        width: 30%;
+    }
+}
+
+
+@media (max-width: 670px) {
 
     .main {
         overflow-y: visible;
@@ -8,16 +34,34 @@
         }
     }
 
+    .topContainer {
+        height: 100%;
+        margin-bottom: 3rem;
+    }
+
     .birdhouseContainer {
         // overflow-x: auto;
         // scroll-snap-type: x mandatory;
         scroll-behavior: touch;
         flex-wrap: wrap;
+        height: 100%;
+        margin-bottom: 3rem;
     }
 
     .birdCard {
         width: 100%;
     }
 
+    .footer {
+        position: static;
+    }
     
+}
+
+@media (max-width: 480px) {
+    .form {
+        h1 {
+            font-size: 1rem;
+        }
+    }
 }
