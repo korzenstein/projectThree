@@ -449,8 +449,28 @@ html {
   text-align: right;
 }
 .weatherContainer .winds {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.weatherContainer .winds .windSpeed {
   font-size: 0.85rem;
   margin-top: 0.4rem;
+}
+.weatherContainer .winds .windDirection {
+  position: relative;
+}
+.weatherContainer .winds .windDirection img {
+  width: 1rem;
+  position: absolute;
+  left: -1.1rem;
+  bottom: -11px;
 }
 .weatherContainer .weatherIcon {
   position: relative;
@@ -465,18 +485,32 @@ html {
   top: -2.3rem;
 }
 
-.form input {
-  border: none;
-  padding: 0.6rem 1rem;
+.form {
+  position: relative;
+}
+.form span {
+  position: relative;
+}
+.form span .searchIcon {
+  width: 1.2rem;
+  position: absolute;
+  left: 15px;
+  top: 2px;
+  z-index: 1;
 }
 .form p {
   font-size: 0.85rem;
 }
 .form .submit {
   cursor: pointer;
+  border: none;
+  padding: 0.6rem 1rem;
 }
 .form .search {
   width: 20rem;
+  border: none;
+  padding: 0.6rem 1rem 0.6rem 3rem;
+  position: relative;
 }
 .form h1 {
   text-transform: uppercase;

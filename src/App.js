@@ -5,6 +5,7 @@ import axios from "axios";
 // components
 import Forecast from "./components/Forecast";
 import BirdHouse from "./components/BirdHouse";
+import binoculars from "./assets/binoc.svg";
 
 function App() {
   const [location, setLocation] = useState("Toronto");
@@ -164,6 +165,11 @@ function App() {
         <form 
         onSubmit={handleSubmit} >
           <label>
+            <span>
+            <img 
+            src={binoculars}
+            className="searchIcon"
+            /></span>
             <input 
               type="text"
               className="search"

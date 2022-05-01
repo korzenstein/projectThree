@@ -9,8 +9,24 @@
     // margin-top: 1rem;
 
     .winds {
-        font-size: 0.85rem;
-        margin-top: 0.4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .windSpeed {
+            font-size: 0.85rem;
+            margin-top: 0.4rem;
+
+        }
+        .windDirection {
+            position: relative;
+            img {
+                width: 1rem;
+                position: absolute;
+                left: -1.1rem;
+                bottom: -11px;
+            }
+        }
     }
 
     .weatherIcon {

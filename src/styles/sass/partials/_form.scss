@@ -1,20 +1,40 @@
 .form {
-    input {
-        border: none;
-        padding: 0.6rem 1rem;
+position: relative;
+    span {
+        position: relative;
+        .searchIcon {
+            width: 1.2rem;
+            position: absolute;
+            left: 15px;
+            top: 2px;
+            z-index: 1;
+        }
     }
+
+    
+    
     p {
         font-size: 0.85rem;
     }
     .submit {
         // margin-left: 1rem;
         cursor: pointer;
+        // width: 20rem;
+        border: none;
+        padding: 0.6rem 1rem;
     }
 
     .search {
         width: 20rem;
+        border: none;
+        padding: 0.6rem 1rem 0.6rem 3rem;
+        position: relative;
         
     }
+
+    
+    
+    
 
     h1 {
         text-transform: uppercase;
