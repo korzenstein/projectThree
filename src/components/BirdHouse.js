@@ -1,6 +1,6 @@
 import Birds from './Birds'
 
-const BirdHouse = ({ birdsArray }) => {
+const BirdHouse = ({ birdsArray, getLikes }) => {
 
   
 
@@ -9,6 +9,7 @@ const BirdHouse = ({ birdsArray }) => {
       <Birds 
       
       birdsArray={birdsArray}
+      getLikes={getLikes}
       
       />
     </div>

@@ -16,6 +16,7 @@
     
     .footer {
         position: static;
+        margin-top: 3rem;
     }
 
     .position {
@@ -52,16 +53,57 @@
         width: 100%;
     }
 
-    .footer {
-        position: static;
+    .form {
+        input[type="text"] {
+            width: 100%;
+            // border: red 1px solid;
+            order: 0;
+        }
+    }
+    
+}
+
+@media (max-width: 570px) {
+    .main {
+        .topContainer {
+            .birdIllustration {
+                width: 90px;
+                left: 160px;
+                top: 80px;
+            }
+        }
     }
     
 }
 
 @media (max-width: 480px) {
-    .form {
-        h1 {
-            font-size: 1rem;
+    
+    .header {
+        .titleContainer {
+            h1 {
+                font-size: 1.8rem;
+            }
         }
+    }
+
+    .main {
+        .topContainer {
+            .birdIllustration {
+                // width: 90px;
+                left: 130px;
+                // top: 80px;
+            }
+        }
+    }
+
+    .form {
+        input[type="text"] {
+            font-size: 0.8rem;
+        }
+    }
+    
+
+    .weatherContainer {
+        padding-top: 3rem;
     }
 }

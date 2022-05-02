@@ -1,0 +1,29 @@
+.header {
+    display: flex;
+
+    .titleContainer {
+        width: 50%;
+        z-index: 20;
+
+        h1 {
+            text-transform: uppercase;
+            font-size: 2.4rem;
+            margin-bottom: 1rem;
+            font-family: "Industrial Gothic";
+            font-weight: normal;
+
+            span {
+                display: block;
+                color: #ec6e4c;
+            }
+        }
+
+        p {
+            font-size: 0.8rem;
+
+            span {
+                display: block;
+            }
+        }
+    }
+}
