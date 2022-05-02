@@ -1,16 +1,12 @@
 .birdhouseContainer {
     display: flex;
     width: 100%;
-    // height: 100%;
-    height: 50vh;
+    // height: 50vh;
     flex-wrap: nowrap;
-    // margin: 0 0 10rem 0;
-    // padding-bottom: 10rem;
-    
     padding: 0;
     transition: all 0.7s ease-in-out;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     gap: 1rem;
     margin-top: auto;
 }

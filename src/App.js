@@ -14,8 +14,7 @@ function App() {
   const [weather, setWeather] = useState({ loading: false });
   const [toggleApi, setToggleApi] = useState(false);
   const [starCounter, setStarCounter] = useState(0);
-
-  // const [birdLiked, setBirdLiked] = useState({})
+  const [birdLiked, setBirdLiked] = useState({})
 
   // Function to handle star counts for liked birds
   const getLikes = () => {
@@ -23,7 +22,7 @@ function App() {
   };
 
   // const toggleLikes = () => {
-  //   setStarCounter()
+  //   setBirdLiked((birdLiked) =>)
 
   // }
 
@@ -197,8 +196,8 @@ function App() {
               </h1>
               <p>
                 Find local and migratory birds in your neighbourhood with your city name - let's get birding.
-
               </p>
+              <p>{starCounter}</p>
             </div>
             <Forecast weather={weather} />
           </header>

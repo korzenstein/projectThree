@@ -1,15 +1,20 @@
-@media (max-width: 880px) {
-
+@media (max-width:1150px) {
     .main {
         overflow-y: visible;
+        .topContainer {
+            .birdIllustration {
+                left: 440px;
+                top: 80px;
+            }
+        }
     }
-
+    
     .birdhouseContainer {
         flex-wrap: wrap;
         justify-content: space-between;
         height: 100%;
     }
-
+    
     .birdCard {
         width: calc((100% / 3) - 1rem);
     }
@@ -18,10 +23,16 @@
         position: static;
         margin-top: 3rem;
     }
-
+    
     .position {
         width: 30%;
     }
+}
+
+
+@media (max-width: 880px) {
+
+   
 }
 
 
@@ -54,10 +65,10 @@
     }
 
     .form {
+        order: 0;
         input[type="text"] {
             width: 100%;
-            // border: red 1px solid;
-            order: 0;
+            
         }
     }
     
