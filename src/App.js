@@ -7,6 +7,12 @@ import Forecast from "./components/Forecast";
 import BirdHouse from "./components/BirdHouse";
 import searchCrow from "./assets/searchCrow.png";
 import illustration1 from "./assets/illustration1.png";
+import puffin from "./assets/puffinSmall.png";
+import cormarant from "./assets/cormSmall.png";
+import bobby from "./assets/bobbySmall.png";
+import frigate from "./assets/frigateSmall.png";
+
+
 
 function App() {
   const [location, setLocation] = useState("Toronto");
@@ -194,8 +200,22 @@ function App() {
         <BirdHouse birdsArray={birdsArray} />
         <footer className="footer">
           <p>Stephen Korzenstein / Juno College 2022</p>
+          
         </footer>
+        
       </div>
+      <img 
+          className="frigate"
+          src={frigate} 
+          alt="frigate" />
+      <img 
+          className="bobby"
+          src={bobby} 
+          alt="Bobby" />
+      <img 
+          className="puffin"
+          src={puffin} 
+          alt="puffin" />
     </main>
   );
 }

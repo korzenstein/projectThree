@@ -7,6 +7,7 @@
     font-size: 125%;
     color: #48484a;
     transition: all 0.5s ease-in-out;
+    position: relative;
     width: 100vw;
     height: 100vh;
     overflow: hidden;
@@ -22,6 +23,33 @@
         max-width: 1380px;
         width: 75%;
         position: relative;
+
+    }
+    // .cormarant {
+    //     position: absolute;
+    //     bottom: -17%;
+    //     right: -5%;
+    //     width: 19%;
+    // }
+
+    .bobby {
+        position: absolute;
+        bottom: -16px;
+        left: 1%;
+        width: 19%;
+    }
+
+    .puffin {
+        position: absolute;
+        bottom: -14px;
+        right: -2%;
+        width: 16%;
+    }
+    .frigate {
+        position: absolute;
+        top: -1px;
+        right: 23%;
+        width: 17%;
     }
 }
 
