@@ -2,7 +2,7 @@ import { useState } from "react";
 import pin from "../assets/pin.svg";
 
 
-const Birds = ({ birdsArray, getLikes }) => {
+const Birds = ({ birdsArray }) => {
   const [clicked, setClicked] = useState();
 
   const handleIndex = (index) => {
@@ -18,7 +18,6 @@ const Birds = ({ birdsArray, getLikes }) => {
             // in react you have the possibility to toggle
             className={index === clicked ? "birdCard position" : "birdCard"}
             onClick={() => {
-              getLikes();
               handleIndex(index);}
             }
 

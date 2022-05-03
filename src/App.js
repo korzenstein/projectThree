@@ -5,7 +5,7 @@ import axios from "axios";
 // components
 import Forecast from "./components/Forecast";
 import BirdHouse from "./components/BirdHouse";
-import binoculars from "./assets/binoc.svg";
+import searchCrow from "./assets/searchCrow.png";
 import illustration1 from "./assets/illustration1.png";
 
 function App() {
@@ -13,18 +13,7 @@ function App() {
   const [birdsArray, setBirdsArray] = useState([]);
   const [weather, setWeather] = useState({ loading: false });
   const [toggleApi, setToggleApi] = useState(false);
-  const [starCounter, setStarCounter] = useState(0);
-  const [birdLiked, setBirdLiked] = useState({})
 
-  // Function to handle star counts for liked birds
-  const getLikes = () => {
-    setStarCounter((starCounter) => starCounter + 1);
-  };
-
-  // const toggleLikes = () => {
-  //   setBirdLiked((birdLiked) =>)
-
-  // }
 
   // UseEffect API Calls for all data
   useEffect(() => {
@@ -40,6 +29,7 @@ function App() {
 
     axios(configLocale)
       .then(function (response) {
+        console.log(response.data[0])
         const results = response.data[0];
         getLocation(results);
       })
@@ -178,7 +168,7 @@ function App() {
           <form className="form" onSubmit={handleSubmit}>
             <label>
               <span>
-                <img src={binoculars} className="searchIcon" />
+                <img src={searchCrow} className="searchIcon" />
               </span>
               <input
                 type="text"
@@ -192,17 +182,16 @@ function App() {
           <header className="header">
             <div className="titleContainer">
               <h1>
-                Birds in Your <span>Backyard</span>
+                Birds <span>in Your Backyard</span>
               </h1>
-              <p>
-                Find local and migratory birds in your neighbourhood with your city name - let's get birding.
-              </p>
-              <p>{starCounter}</p>
+              <h4>
+                Find migratory & local birds in your city and let's get birding!
+              </h4>
             </div>
             <Forecast weather={weather} />
           </header>
         </div>
-        <BirdHouse birdsArray={birdsArray} getLikes={getLikes} />
+        <BirdHouse birdsArray={birdsArray} />
         <footer className="footer">
           <p>Stephen Korzenstein / Juno College 2022</p>
         </footer>

@@ -9,7 +9,7 @@ import windNorthWest from "../assets/windNorthWest.svg";
 
 
 const Forecast = ({ weather }) => {
-  const getDirection = (angle) => {
+  const getArrow = (angle) => {
     const directions = [
       windNorth,
       windNorthEast,
@@ -24,10 +24,25 @@ const Forecast = ({ weather }) => {
     return directions[index];
   };
 
+  const getDirection = (angle) => {
+    const directions = [
+      "N",
+      "NE",
+      "E",
+      "SE",
+      "S",
+      "SW",
+      "W",
+      "NW",
+    ];
+    let index = Math.round(((angle %= 360) < 0 ? angle + 360 : angle) / 45) % 8;
+    return directions[index];
+  };
+
   return (
     <div className="weatherContainer">
       {weather.loading ? (
-        <>
+        <div className="weatherContent">
           <div className="weatherIcon">
             <img
               src={`http://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`}
@@ -40,14 +55,14 @@ const Forecast = ({ weather }) => {
           {/* <p>{weather.name}</p> */}
           <span className="winds">
             <div className="windDirection">
-              <img src={getDirection(weather.wind.deg)} />
+              <img src={getArrow(weather.wind.deg)} />
             </div>
             <p className="windSpeed">
-              {Math.round(weather.wind.speed * 3.6)} kph{" "}
+              {Math.round(weather.wind.speed * 3.6)} kph {getDirection(weather.wind.deg)}
             </p>
           </span>
           {/* <p>visibility: {getDirection(weather.visibility)} km</p> */}
-        </>
+        </div>
       ) : (
         <p></p>
       )}

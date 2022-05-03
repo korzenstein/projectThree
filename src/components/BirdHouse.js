@@ -1,16 +1,13 @@
 import Birds from './Birds'
 
-const BirdHouse = ({ birdsArray, getLikes }) => {
+const BirdHouse = ({ birdsArray }) => {
 
   
 
   return (
     <div className="birdhouseContainer">
       <Birds 
-      
-      birdsArray={birdsArray}
-      getLikes={getLikes}
-      
+      birdsArray={birdsArray}      
       />
     </div>
   );

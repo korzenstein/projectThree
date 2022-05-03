@@ -1,32 +1,43 @@
 .form {
   width: 100%;
-  // position: relative;
   display: flex;
-  // flex-direction: column;
-  margin-top: 3px;
+  z-index: 20;
   order: 1;
+  height: 3rem;
+  
 
   input[type="text"] {
-    background-color: white;
+    background-color: rgb(77, 137, 174, 0.4);
+    transition: all 0.2s ease-in-out;
+    font-family: 'Josefin Sans';
     border-radius: 10px;
+    font-weight: 600;
     font-size: 1rem;
-    color: inherit;
-    width: 20rem;
+    color: white;
+    width: 10rem;
     border: none;
-    padding: 1rem 1rem 1rem 3rem;
+    padding: 0.8rem 1rem 0.5rem 3.9rem;
     position: relative;
+    border-bottom: 1px solid rgb(72, 72, 74, 0.3);
+
     order: 1;
+    &:hover, 
+    &:focus {
+      background-color: rgb(77, 137, 174, 0.6);
+      width: 15rem;
+    }
   }
 
   span {
     position: relative;
 
     .searchIcon {
-      width: 1.2rem;
+      width: 1.65rem;
       position: absolute;
-      left: 15px;
-      top: 5px;
+      left: 14px;
+      top: -3px;
       z-index: 1;
+      filter: invert(100%)
     }
   }
 

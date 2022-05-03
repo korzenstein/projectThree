@@ -1,12 +1,6 @@
-@media (max-width:1150px) {
+@media (max-width:1100px) {
     .main {
         overflow-y: visible;
-        .topContainer {
-            .birdIllustration {
-                left: 440px;
-                top: 80px;
-            }
-        }
     }
     
     .birdhouseContainer {
@@ -17,15 +11,20 @@
     
     .birdCard {
         width: calc((100% / 3) - 1rem);
+        margin-bottom: 1.2rem;
     }
     
     .footer {
         position: static;
-        margin-top: 3rem;
+        margin-top: 1rem;
+        padding-bottom: 0.5rem;
     }
-    
+    .birdTitle {
+        font-size: 0.92rem;
+    }
     .position {
         width: 30%;
+        font-size: 0.92rem;
     }
 }
 
@@ -41,7 +40,7 @@
     .main {
         overflow-y: visible;
         .wrapper {
-            width: 90%;
+            width: 85%;
 
         }
     }
@@ -49,6 +48,10 @@
     .topContainer {
         height: 100%;
         margin-bottom: 3rem;
+        .birdIllustration {
+            top: 58px;
+            width: 15rem;
+        }
     }
 
     .birdhouseContainer {
@@ -58,18 +61,43 @@
         flex-wrap: wrap;
         height: 100%;
         margin-bottom: 3rem;
+        gap: 4rem;
     }
 
     .birdCard {
         width: 100%;
     }
 
+
     .form {
+        margin-bottom: 3rem;
         order: 0;
+
+        label {
+            width: 100%;
+        }
         input[type="text"] {
             width: 100%;
             
         }
+    }
+
+    .subTitle {
+        padding: 2rem;
+        .birdLocation {
+            .pin {
+                width: 2.4rem;
+            }
+        }
+    }
+
+    .birdTitle {
+        font-size:1.5rem;
+    }
+
+    .position {
+        font-size: 1.5rem;
+        width: 90%;
     }
     
 }
@@ -78,9 +106,8 @@
     .main {
         .topContainer {
             .birdIllustration {
-                width: 90px;
-                left: 160px;
-                top: 80px;
+                width: 10rem;
+                top: 130px;
             }
         }
     }
@@ -101,13 +128,13 @@
         .topContainer {
             .birdIllustration {
                 // width: 90px;
-                left: 130px;
                 // top: 80px;
             }
         }
     }
 
     .form {
+        
         input[type="text"] {
             font-size: 0.8rem;
         }

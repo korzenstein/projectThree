@@ -10,15 +10,17 @@
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-    background-color: #fef9f5;
+    background-color: rgb(254, 238, 226);
+    font-family: 'Josefin Sans',
+    sans-serif;
     .wrapper {
         display: flex;
         flex-direction: column;
         justify-content: center;
         gap: 0.5rem;
-        margin: 1.5rem auto;
+        margin: 3.2rem auto 0 auto;
         max-width: 1380px;
-        width: 85%;
+        width: 75%;
         position: relative;
     }
 }
@@ -27,17 +29,19 @@
 
 .topContainer {
     display: flex;
-    // justify-content: space-between;
-    height: 35vh;
+    justify-content: space-evenly;
+    height: 32vh;
     // align-items: center;
     flex-direction: column;
     width: 100%;
+    margin-bottom: 1rem;
 
     .birdIllustration {
         position: absolute;
-        width: 240px;
-        left: 600px;
-        top: 60px;
+        display: none;
+        width: 20rem;
+        right: 10%;
+        top: -1%;
         z-index: 0;
     }
 }

@@ -9,9 +9,11 @@
     align-items: flex-start;
     gap: 1rem;
     margin-top: auto;
+    
 }
 
 .birdCard {
+    position: relative;
     gap: 0.7rem 1rem;
     background-color: none;
     display: flex;
@@ -23,9 +25,10 @@
     position: relative;
     color: rgb(72, 72, 74, 0);
     font-size: 0;
+    border-radius: 10px;
     :hover {
         transition: all 0.25s ease-in-out;
-        opacity: 0.8;
+        opacity: 0.9;
         // cursor: pointer;
     }
 }
@@ -48,30 +51,42 @@
     display: block;
     height: auto;
     border-radius: 10px;
+    box-shadow: 7px 7.5px rgb(77, 137, 174, 0.2);
 }
 
 .birdTitle {
-    font-size: 0.88rem;
-    padding-left: 0.2rem;
+    position: absolute;
+    font-size: 0.9rem;
+    padding-left: 0.5rem;
     width: 100%;
     opacity: 1;
-    font-family: helvetica, arial;
-    font-weight: 400;
+    font-family: 'Josefin Sans',
+    sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
     color: rgb(72, 72, 74);
     transition: all 0.7s ease-in-out;
+    bottom: -2rem;
+    height: 1rem;
 }
 
 .subTitle {
     font-size: inherit;
+    border-bottom-right-radius: 10px;
     position: absolute;
     width: 100%;
     background-color: inherit;
     opacity: inherit;
-    bottom: 26px;
+    // bottom: 26px;
+    bottom: 0;
     right: 0;
     color: inherit;
     padding: 0.5rem 0.5rem 0.65rem 0.65rem;
     transition: all 0.7s ease-in-out;
+
+    &:hover {
+        opacity: 1;
+    }
 
     .birdLocation {
         font-size: inherit;
@@ -82,7 +97,7 @@
         
         .pin {
             display: inline-block;
-            width: 1.3rem;
+            width: 1.5rem;
             background-color: inherit;
             fill: #ffffff;
         }
@@ -101,7 +116,7 @@
     font-size: 0.88rem;
     transition: all 0.7s ease-in-out;
     width: 25%;
-    background-color: rgb(255, 255, 255, 0.7);
+    background-color: rgb(254,238,226, 0.7);
     color: rgb(72, 72, 74);
     // order: -1;
 }
