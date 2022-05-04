@@ -3,17 +3,31 @@
     padding: 0;
 }
 
-.main {
+.body {
+    overflow-x: hidden;
+    overflow-y: hidden;
+
     font-size: 125%;
     color: #48484a;
+    // transition: all 0.5s ease-in-out;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(254, 238, 226);
+    font-family: 'Josefin Sans',
+    sans-serif;
+}
+
+.main {
+
     transition: all 0.5s ease-in-out;
     position: relative;
     width: 100vw;
     height: 100vh;
-    overflow: hidden;
     background-color: rgb(254, 238, 226);
-    font-family: 'Josefin Sans',
-    sans-serif;
+    overflow-x: hidden;
+    overflow-y: hidden;
+
     .wrapper {
         display: flex;
         flex-direction: column;
@@ -25,12 +39,6 @@
         position: relative;
 
     }
-    // .cormarant {
-    //     position: absolute;
-    //     bottom: -17%;
-    //     right: -5%;
-    //     width: 19%;
-    // }
 
     .bobby {
         position: absolute;
@@ -50,6 +58,7 @@
         top: -1px;
         right: 23%;
         width: 17%;
+        opacity: 0.82;
     }
 }
 

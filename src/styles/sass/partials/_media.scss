@@ -1,15 +1,18 @@
 @media (max-width:1100px) {
-    .main {
+    body {
         overflow-y: visible;
-        height: auto;
-
-        .puffin {
-            bottom: -32px;
-        }
-
-        .bobby {
-            bottom: -32px;
-            
+        .main {
+            // overflow-y: visible;
+            height: auto;
+        
+            .puffin {
+                bottom: -32px;
+            }
+        
+            .bobby {
+                bottom: -32px;
+        
+            }
         }
     }
     
@@ -73,7 +76,9 @@
 @media (max-width: 670px) {
 
     .main {
-        overflow-y: visible;
+        .frigate {
+            display: none;
+        }
         .wrapper {
             width: 85%;
 
@@ -90,7 +95,7 @@
     }
 
     .birdhouseContainer {
-        scroll-behavior: touch;
+        // scroll-behavior: touch;
         flex-wrap: wrap;
         height: 100%;
         margin-bottom: 3rem;
@@ -132,6 +137,20 @@
         font-size: 1.5rem;
         width: 90%;
     }
+
+    body {
+        .main {
+        
+            .puffin {
+                bottom: 0;
+            }
+        
+            .bobby {
+                bottom: 0;
+        
+            }
+        }
+    }
     
 }
 
@@ -141,6 +160,7 @@
             h1 {
                 font-size: 6rem;
             }
+            
         }
     }
     
@@ -151,16 +171,29 @@
     .header {
         .titleContainer {
             h1 {
-                font-size: 1.8rem;
+                font-size: 4rem;
                 span {
                     font-size: 1rem;
                 }
             }
         }
     }
-    
 
-    // .weatherContainer {
-    //     padding-top: 3rem;
-    // }
+    .form{
+        margin-bottom: 2.2rem;
+        input[type="text"] {
+        
+            &:hover,
+            &:focus {
+                width:inherit;
+            }
+        }
+    }
+
+    .weatherContainer {
+        .weatherContent {
+            padding: 2rem 1.7rem 2rem 1.8rem;
+        }
+    }
+    
 }

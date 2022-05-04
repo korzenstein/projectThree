@@ -6,13 +6,9 @@ import axios from "axios";
 import Forecast from "./components/Forecast";
 import BirdHouse from "./components/BirdHouse";
 import searchCrow from "./assets/searchCrow.png";
-import illustration1 from "./assets/illustration1.png";
 import puffin from "./assets/puffinSmall.png";
-import cormarant from "./assets/cormSmall.png";
 import bobby from "./assets/bobbySmall.png";
 import frigate from "./assets/frigateSmall.png";
-
-
 
 function App() {
   const [location, setLocation] = useState("Toronto");
@@ -35,7 +31,6 @@ function App() {
 
     axios(configLocale)
       .then(function (response) {
-        console.log(response.data[0])
         const results = response.data[0];
         getLocation(results);
       })
@@ -90,7 +85,6 @@ function App() {
                 getPexel(`${birdData[5].comName} bird`),
               ]);
               const pexelData = res.map((res) => {
-                // console.log(res.value.data.photos[0])
                 return res.value.data.photos[0];
               });
 
@@ -100,7 +94,6 @@ function App() {
               }));
 
               setBirdsArray(finalData);
-              console.log(birdsArray);
             } catch {
               throw Error("Promise failed");
             }
@@ -111,6 +104,8 @@ function App() {
           console.log(error);
         });
     };
+
+    // Backup keys for Pexel API
     // 563492ad6f9170000100000164e2845cbb41412ea75d4386889a4b2b
     // 563492ad6f91700001000001c6c2def7324b4e4d8e07033d45546233
 
@@ -132,13 +127,6 @@ function App() {
       };
 
       return axios(configPexel);
-
-      // .then(function (response) {
-      //   return response.data
-      // })
-      // .catch(function (error) {
-      //   console.log(error);
-      // });
     };
 
     // Weather API - for location
@@ -152,7 +140,6 @@ function App() {
       axios(configWeath)
         .then(function (response) {
           const data = { ...response.data, loading: true };
-          console.log(data);
           setWeather(data);
         })
         .catch(function (error) {
@@ -170,11 +157,13 @@ function App() {
     <main className="main">
       <div className="wrapper">
         <div class="topContainer">
-          <img className="birdIllustration" src={illustration1} />
           <form className="form" onSubmit={handleSubmit}>
             <label>
               <span>
-                <img src={searchCrow} className="searchIcon" />
+                <img 
+                src={searchCrow} 
+                alt="Crow icon for search bar"
+                className="searchIcon" />
               </span>
               <input
                 type="text"
