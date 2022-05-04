@@ -10,7 +10,7 @@
 
   // Search input
   input[type="text"] {
-    background-color: rgb(77, 137, 174, 0.4);
+    background-color: rgba(77, 137, 174, 0.4);
     transition: all 0.2s ease-in-out;
     font-family: "Josefin Sans";
     border-radius: 10px;
@@ -21,11 +21,11 @@
     border: none;
     padding: 0.8rem 1rem 0.5rem 3.9rem;
     position: relative;
-    box-shadow: 2px 2px rgb(72, 72, 74, 0.2);
+    box-shadow: 2px 2px rgba(72, 72, 74, 0.2);
     order: 1;
     &:hover,
     &:focus {
-      background-color: rgb(77, 137, 174, 0.6);
+      background-color: rgba(77, 137, 174, 0.6);
       width: 15rem;
     }
   }
@@ -54,12 +54,12 @@
     border: none;
     padding: 0.8rem 1.2rem 0.5rem 1.2rem;
     font-weight: 400;
-    color: rgb(72, 72, 74, 0.8);
+    color: rgba(72, 72, 74, 0.8);
     text-transform: uppercase;
     font-family: "Josefin Sans";
     font-size: 1rem;
     border-radius: 10px;
-    box-shadow: 1px 2px rgb(72, 72, 74, 0.2);
+    box-shadow: 1px 2px rgba(72, 72, 74, 0.2);
     &:hover,
     &:focus {
       opacity: 0.7;

@@ -23,7 +23,7 @@
     width: calc(100% / 5);
     height: fit-content;
     position: relative;
-    color: rgb(72, 72, 74, 0);
+    color: rgba(72, 72, 74, 0);
     font-size: 0;
     border-radius: 10px;
     :hover, 
@@ -38,7 +38,7 @@
     display: block;
     height: auto;
     border-radius: 10px;
-    box-shadow: 7px 7.5px rgb(77, 137, 174, 0.2);
+    box-shadow: 7px 7.5px rgba(77, 137, 174, 0.2);
 }
 
 .birdTitle {
@@ -99,7 +99,7 @@
     font-size: 0.88rem;
     transition: all 0.7s ease-in-out;
     width: 25%;
-    background-color: rgb(254,238,226, 0.7);
+    background-color: rgba(254,238,226, 0.7);
     color: rgb(72, 72, 74);
 }
 
