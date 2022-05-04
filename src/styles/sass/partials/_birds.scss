@@ -1,0 +1,116 @@
+// Birdhouse and bird card styles
+
+.birdhouseContainer {
+    display: flex;
+    width: 100%;
+    flex-wrap: nowrap;
+    padding: 0;
+    transition: all 0.7s ease-in-out;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-top: auto;
+}
+
+.birdCard {
+    position: relative;
+    gap: 0.7rem 1rem;
+    background-color: none;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.7s ease-in-out;
+    animation: opacity 1s ease-in;
+    width: calc(100% / 5);
+    height: fit-content;
+    position: relative;
+    color: rgb(72, 72, 74, 0);
+    font-size: 0;
+    border-radius: 10px;
+    :hover, 
+    :focus {
+        transition: all 0.25s ease-in-out;
+        opacity: 0.9;
+    }
+}
+
+.birdImage {
+    width: 100%;
+    display: block;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 7px 7.5px rgb(77, 137, 174, 0.2);
+}
+
+.birdTitle {
+    position: absolute;
+    font-size: 0.9rem;
+    padding-left: 0.5rem;
+    width: 100%;
+    opacity: 1;
+    font-family: 'Josefin Sans',
+    sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: rgb(72, 72, 74);
+    transition: all 0.7s ease-in-out;
+    bottom: -2rem;
+    height: 1rem;
+}
+
+.subTitle {
+    font-size: inherit;
+    border-bottom-right-radius: 10px;
+    position: absolute;
+    width: 100%;
+    background-color: inherit;
+    opacity: inherit;
+    bottom: 0;
+    right: 0;
+    color: inherit;
+    padding: 0.5rem 0.5rem 0.65rem 0.65rem;
+    transition: all 0.7s ease-in-out;
+
+    &:hover {
+        opacity: 1;
+    }
+
+    .birdLocation {
+        font-size: inherit;
+        opacity: 1;
+        text-align: left;
+        
+        .pin {
+            display: inline-block;
+            width: 1.5rem;
+            background-color: inherit;
+            fill: #ffffff;
+        }
+    }
+    .birdSci {
+        font-size: inherit;
+        font-style: italic;
+        margin-top: 0.3rem;
+    }
+}
+
+// When clicked, bird cards will activate class
+.position {
+    opacity: 1;
+    font-size: 0.88rem;
+    transition: all 0.7s ease-in-out;
+    width: 25%;
+    background-color: rgb(254,238,226, 0.7);
+    color: rgb(72, 72, 74);
+}
+
+// Starting transition
+.opacity {
+    @keyframes opacity {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+}

@@ -1,0 +1,44 @@
+// Header styles
+
+.header {
+    display: flex;
+
+    .titleContainer {
+        display: flex;
+        width: 70%;
+        z-index: 20;
+        align-items: flex-start;
+        gap: 3rem;
+
+        h1 {
+            text-transform: uppercase;
+            color: #ec6e4c;
+            font-size: 6.3rem;
+            margin: 0 0.1rem 0 0 ;
+            font-family: "Bodoni", Times, serif;
+            font-weight: normal;
+            width: 100%;
+    
+            span {
+                display: block;
+                font-size: 1.7rem;
+                color: rgb(72, 72, 74);
+                margin-left: 3px;
+                line-height: 0.9rem;
+            }
+        }
+
+        h4 {
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.6rem;
+            margin-top: 2rem;
+            padding-left: 1rem;
+            text-transform: uppercase;
+            font-family: 'Josefin Sans', sans-serif;
+            text-align: left;
+            border-left: solid 1px rgb(72, 72, 74, 0.3);
+            
+        }
+    }
+}

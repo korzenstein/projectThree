@@ -1,0 +1,213 @@
+// Media queries
+
+@media (max-width:1100px) {
+    body {
+        overflow-y: visible;
+        .main {
+            // overflow-y: visible;
+            height: auto;
+        
+            .puffin {
+                bottom: -32px;
+            }
+        
+            .bobby {
+                bottom: -32px;
+        
+            }
+        }
+    }
+    
+    .birdhouseContainer {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        height: 100%;
+        gap: 3rem 1rem;
+        padding-top: 2rem;
+        margin-bottom: 4rem;
+    }
+    
+    .birdCard {
+        width: calc((100% / 3) - 1.5rem);
+        margin-bottom: 1.2rem;
+    }
+    
+    .footer {
+        position: static;
+        margin-top: 1rem;
+        padding-bottom: 0.5rem;
+    }
+    .birdTitle {
+        font-size: 0.92rem;
+    }
+    .position {
+        width: 30%;
+        font-size: 0.92rem;
+    }
+
+    .topContainer {
+        height: auto;
+        gap: 2rem;
+    }
+
+    .header {
+        .titleContainer {
+            flex-direction: column;
+            gap: 2rem;
+
+            h1 {
+                // margin-top: 6rem;
+                font-size: 9rem;
+            }
+
+            h4 {
+                border-left: none;
+                padding-left: 0;
+                border-top: solid 1px rgb(72, 72, 74, 0.3);
+                padding-top: 1rem;
+                margin: 0;
+                
+            }
+
+        }
+    }
+
+    .weatherContainer {
+        align-self: center;
+    }
+}
+
+@media (max-width: 880px) {
+    .main {
+        .frigate {
+            display: none;
+        }
+    }
+    
+}
+
+
+@media (max-width: 670px) {
+
+    .main {
+        .frigate {
+            display: none;
+        }
+        .wrapper {
+            width: 85%;
+
+        }
+    }
+
+    .topContainer {
+        height: 100%;
+        gap: 0;
+        .birdIllustration {
+            top: 58px;
+            width: 15rem;
+        }
+    }
+
+    .birdhouseContainer {
+        // scroll-behavior: touch;
+        flex-wrap: wrap;
+        height: 100%;
+        margin-bottom: 5rem;
+        gap: 4rem;
+    }
+
+    .birdCard {
+        width: 100%;
+    }
+
+
+    .form {
+        margin-bottom: 1.3rem;
+        order: 0;
+
+        label {
+            width: 100%;
+        }
+        input[type="text"] {
+            width: 100%;
+            
+        }
+    }
+
+    .subTitle {
+        padding: 2rem;
+        .birdLocation {
+            .pin {
+                width: 2.4rem;
+            }
+        }
+    }
+
+    .birdTitle {
+        font-size:1.5rem;
+    }
+
+    .position {
+        font-size: 1.5rem;
+        width: 90%;
+    }
+
+    body {
+        .main {
+        
+            .puffin {
+                bottom: 0;
+            }
+        
+            .bobby {
+                bottom: 0;
+        
+            }
+        }
+    }
+    
+}
+
+@media (max-width: 570px) {
+    .main {
+        .topContainer {
+            h1 {
+                font-size: 6rem;
+            }
+            
+        }
+    }
+    
+}
+
+@media (max-width: 480px) {
+    
+    .header {
+        .titleContainer {
+            h1 {
+                font-size: 4rem;
+                span {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+
+    .form{
+        margin-bottom: 2.2rem;
+        input[type="text"] {
+        
+            &:hover,
+            &:focus {
+                width:inherit;
+            }
+        }
+    }
+
+    .weatherContainer {
+        .weatherContent {
+            padding: 2rem 1.7rem 2rem 1.8rem;
+        }
+    }
+    
+}

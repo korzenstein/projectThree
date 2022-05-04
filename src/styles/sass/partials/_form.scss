@@ -1,0 +1,68 @@
+// Form styles
+
+.form {
+  width: 100%;
+  display: flex;
+  z-index: 20;
+  order: 1;
+  height: 2.6rem;
+  gap: 0.5rem;
+
+  // Search input
+  input[type="text"] {
+    background-color: rgb(77, 137, 174, 0.4);
+    transition: all 0.2s ease-in-out;
+    font-family: "Josefin Sans";
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 1rem;
+    color: white;
+    width: 10rem;
+    border: none;
+    padding: 0.8rem 1rem 0.5rem 3.9rem;
+    position: relative;
+    box-shadow: 2px 2px rgb(72, 72, 74, 0.2);
+    order: 1;
+    &:hover,
+    &:focus {
+      background-color: rgb(77, 137, 174, 0.6);
+      width: 15rem;
+    }
+  }
+
+  span {
+    position: relative;
+
+    .searchIcon {
+      width: 1.65rem;
+      position: absolute;
+      left: 14px;
+      top: -3px;
+      z-index: 1;
+      filter: invert(100%);
+    }
+  }
+
+  p {
+    font-size: 0.85rem;
+  }
+
+  // Submit button
+  .submit {
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    border: none;
+    padding: 0.8rem 1.2rem 0.5rem 1.2rem;
+    font-weight: 400;
+    color: rgb(72, 72, 74, 0.8);
+    text-transform: uppercase;
+    font-family: "Josefin Sans";
+    font-size: 1rem;
+    border-radius: 10px;
+    box-shadow: 1px 2px rgb(72, 72, 74, 0.2);
+    &:hover,
+    &:focus {
+      opacity: 0.7;
+    }
+  }
+}

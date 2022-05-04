@@ -1,0 +1,93 @@
+// Base / main styles
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.body {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    font-size: 125%;
+    color: #48484a;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+a {
+    font-weight: 500;
+    color: inherit;
+
+    &:visited {
+        color: inherit;
+    }
+}
+
+
+.main {
+
+    transition: all 0.5s ease-in-out;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(254, 238, 226);
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 3.2rem auto 0 auto;
+        max-width: 1380px;
+        width: 75%;
+        position: relative;
+    }
+
+    // Bird images
+
+    .bobby {
+        position: absolute;
+        bottom: -16px;
+        left: 1%;
+        width: 19%;
+    }
+
+    .puffin {
+        position: absolute;
+        bottom: -14px;
+        right: -2%;
+        width: 16%;
+    }
+    .frigate {
+        position: absolute;
+        top: -9px;
+        right: 25.5%;
+        width: 15%;
+        min-width: 170px;
+        // opacity: 0.82;
+    }
+}
+
+
+
+.topContainer {
+    display: flex;
+    justify-content: space-evenly;
+    height: 32vh;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 1rem;
+
+    .birdIllustration {
+        position: absolute;
+        display: none;
+        width: 20rem;
+        right: 10%;
+        top: -1%;
+        z-index: 0;
+    }
+}
+

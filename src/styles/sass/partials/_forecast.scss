@@ -1,0 +1,55 @@
+// Forecast styles
+
+.weatherContainer {
+  width: 50%;
+  height: 100%;
+  z-index: 10;
+  margin: 0;
+  display: flex; 
+  justify-content: flex-end;
+  .weatherContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: #48484a;
+    text-align: center;
+    background-color: rgb(77, 137, 174, 0.4);
+    padding: 2.2rem 2rem 2.2rem 2.1rem;
+    border-radius: 150px;
+    width: fit-content;
+    .winds {
+      align-self: flex-end;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .windSpeed {
+        font-size: 0.85rem;
+        margin-top: 0.4rem;
+      }
+      .windDirection {
+        position: relative;
+        img {
+          width: 1rem;
+          position: absolute;
+          left: -1.1rem;
+          bottom: -11px;
+        }
+      }
+    }
+
+    .weatherIcon {
+      position: relative;
+      height: 3rem;
+      width: 3rem;
+      align-self: end;
+
+      img {
+        position: absolute;
+        left: -2rem;
+        top: -2.3rem;
+      }
+    }
+  }
+}
