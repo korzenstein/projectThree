@@ -8,15 +8,13 @@ import BirdHouse from "./components/BirdHouse";
 import searchCrow from "./assets/searchCrow.png";
 import puffin from "./assets/puffinSmall.png";
 import bobby from "./assets/bobbySmall.png";
-// import frigate from "./assets/frigateSmall.png";
 import tern from "./assets/ternSmall.png";
-import binoc from "./assets/binoc.svg";
 
 
 function App() {
 
   // useState 
-  const [location, setLocation] = useState("Toronto");
+  const [location, setLocation] = useState("Toronto, Canada");
   const [birdsArray, setBirdsArray] = useState([]);
   const [weather, setWeather] = useState({ loading: false });
   const [toggleApi, setToggleApi] = useState(false);
@@ -24,7 +22,7 @@ function App() {
 
   // UseEffect API Calls for all data
   useEffect(() => {
-    // STEP 1 - Location API Call for Lat & Long
+    // STEP 1 - Location API Call for Latitude & Longitude
     const configLocale = {
       method: "get",
       url: `https://api.openweathermap.org/geo/1.0/direct`,
@@ -44,18 +42,18 @@ function App() {
         console.log(error);
       });
 
-    // Function to get location
+    // Function to get location and break it down to 2 decimal places
     const getLocation = (data) => {
       let latitude = data.lat.toFixed(2);
       let longitude = data.lon.toFixed(2);
 
-      // STEP 2 - birdCall function
+      // STEP 2 - API call to get local bird sightings
       birdCall(latitude, longitude);
-      // STEP 3 - weatherCall function
+      // STEP 3 - API call to get local weather
       weatherCall(latitude, longitude);
     };
 
-    // Bird API call for recent sitings, passing in lat and long
+    // Cornell University's eBird API that grabs recent sitings, passing in lat and long as arguments
     const birdCall = (latitude, longitude) => {
       const configBird = {
         method: "get",
@@ -69,7 +67,6 @@ function App() {
 
       axios(configBird)
         .then(function (response) {
-          // setBirdsArray(response.data);
           const birdData = [
             response.data[0],
             response.data[1],
@@ -79,6 +76,7 @@ function App() {
             response.data[5],
           ];
 
+          // Passing in 6 bird names to the image API as arguments to grab images of them using 6 API 'promise all' calls
           const fetchImages = async () => {
             try {
               const res = await Promise.allSettled([
@@ -114,7 +112,7 @@ function App() {
     // 563492ad6f9170000100000164e2845cbb41412ea75d4386889a4b2b
     // 563492ad6f91700001000001c6c2def7324b4e4d8e07033d45546233
 
-    // Pexel Image API call
+    // API call for Pexels image database
     const getPexel = (term) => {
       const APIkey = "563492ad6f9170000100000164e2845cbb41412ea75d4386889a4b2b";
       const configPexel = {
@@ -153,6 +151,7 @@ function App() {
     };
   }, [toggleApi]);
 
+  // Toggle function to call useState/APIs after user submits new city
   const handleSubmit = (event) => {
     event.preventDefault();
     setToggleApi(!toggleApi);
@@ -165,10 +164,10 @@ function App() {
           <form className="form" onSubmit={handleSubmit}>
             <label>
               <span>
-                <img 
-                src={searchCrow} 
-                alt="Crow icon for search bar"
-                className="searchIcon" />
+                <img
+                  src={searchCrow}
+                  alt="Crow icon for search bar"
+                  className="searchIcon" />
               </span>
               <input
                 type="text"
@@ -185,7 +184,7 @@ function App() {
                 Birds <span>in Your Backyard</span>
               </h1>
               <h4>
-                Find migratory & local birds in your city and let's get birding! <span><img src={binoc} alt="binoculars icon" /></span>
+                Find migratory & local birds in your city and let's get birding!
               </h4>
             </div>
             <Forecast weather={weather} />
@@ -194,22 +193,20 @@ function App() {
         <BirdHouse birdsArray={birdsArray} />
         <footer className="footer">
           <p>Stephen Korzenstein / Juno College 2022</p>
-          
         </footer>
-        
       </div>
-      <img 
-          className="frigate"
-          src={tern} 
-          alt="frigate" />
-      <img 
-          className="bobby"
-          src={bobby} 
-          alt="Bobby" />
-      <img 
-          className="puffin"
-          src={puffin} 
-          alt="puffin" />
+      <img
+        className="frigate"
+        src={tern}
+        alt="frigate" />
+      <img
+        className="bobby"
+        src={bobby}
+        alt="Bobby" />
+      <img
+        className="puffin"
+        src={puffin}
+        alt="puffin" />
     </main>
   );
 }

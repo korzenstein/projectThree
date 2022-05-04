@@ -38,18 +38,7 @@
             font-family: 'Josefin Sans', sans-serif;
             text-align: left;
             border-left: solid 1px rgb(72, 72, 74, 0.3);
-            span{
-                position: relative;
-                img {
-                    position: absolute;
-                    width: 1.2rem;
-                    z-index: 10;
-                    // stroke: rgb(72, 72, 74);
-                    bottom: 1px;
-                    left: 0.4rem;
-                    
-                }
-            }
+            
         }
     }
 }
