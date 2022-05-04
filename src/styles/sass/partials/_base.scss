@@ -1,3 +1,5 @@
+// Base / main styles
+
 * {
     margin: 0;
     padding: 0;
@@ -6,17 +8,23 @@
 .body {
     overflow-x: hidden;
     overflow-y: hidden;
-
     font-size: 125%;
     color: #48484a;
-    // transition: all 0.5s ease-in-out;
     position: relative;
     width: 100vw;
     height: 100vh;
-    background-color: rgb(254, 238, 226);
-    font-family: 'Josefin Sans',
-    sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
 }
+
+a {
+    font-weight: 500;
+    color: inherit;
+
+    &:visited {
+        color: inherit;
+    }
+}
+
 
 .main {
 
@@ -32,13 +40,13 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        gap: 0.5rem;
         margin: 3.2rem auto 0 auto;
         max-width: 1380px;
         width: 75%;
         position: relative;
-
     }
+
+    // Bird images
 
     .bobby {
         position: absolute;
@@ -55,10 +63,11 @@
     }
     .frigate {
         position: absolute;
-        top: -1px;
-        right: 23%;
-        width: 17%;
-        opacity: 0.82;
+        top: -9px;
+        right: 25.5%;
+        width: 15%;
+        min-width: 170px;
+        // opacity: 0.82;
     }
 }
 
@@ -68,7 +77,6 @@
     display: flex;
     justify-content: space-evenly;
     height: 32vh;
-    // align-items: center;
     flex-direction: column;
     width: 100%;
     margin-bottom: 1rem;

@@ -2,15 +2,20 @@ import "./styles/styles.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-// components
+// components imported
 import Forecast from "./components/Forecast";
 import BirdHouse from "./components/BirdHouse";
 import searchCrow from "./assets/searchCrow.png";
 import puffin from "./assets/puffinSmall.png";
 import bobby from "./assets/bobbySmall.png";
-import frigate from "./assets/frigateSmall.png";
+// import frigate from "./assets/frigateSmall.png";
+import tern from "./assets/ternSmall.png";
+import binoc from "./assets/binoc.svg";
+
 
 function App() {
+
+  // useState 
   const [location, setLocation] = useState("Toronto");
   const [birdsArray, setBirdsArray] = useState([]);
   const [weather, setWeather] = useState({ loading: false });
@@ -180,7 +185,7 @@ function App() {
                 Birds <span>in Your Backyard</span>
               </h1>
               <h4>
-                Find migratory & local birds in your city and let's get birding!
+                Find migratory & local birds in your city and let's get birding! <span><img src={binoc} alt="binoculars icon" /></span>
               </h4>
             </div>
             <Forecast weather={weather} />
@@ -195,7 +200,7 @@ function App() {
       </div>
       <img 
           className="frigate"
-          src={frigate} 
+          src={tern} 
           alt="frigate" />
       <img 
           className="bobby"

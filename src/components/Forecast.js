@@ -7,8 +7,9 @@ import windSouthWest from "../assets/windSouthWest.svg";
 import windWest from "../assets/windWest.svg";
 import windNorthWest from "../assets/windNorthWest.svg";
 
-
 const Forecast = ({ weather }) => {
+
+  // Function to get weather arrow icons
   const getArrow = (angle) => {
     const directions = [
       windNorth,
@@ -24,6 +25,7 @@ const Forecast = ({ weather }) => {
     return directions[index];
   };
 
+  // Function to get weather directions
   const getDirection = (angle) => {
     const directions = [
       "N",
@@ -52,7 +54,6 @@ const Forecast = ({ weather }) => {
           <p className="temperature">
             {Math.round(weather.main.temp - 273.15)} C
           </p>
-          {/* <p>{weather.name}</p> */}
           <span className="winds">
             <div className="windDirection">
               <img src={getArrow(weather.wind.deg)} />
@@ -61,7 +62,6 @@ const Forecast = ({ weather }) => {
               {Math.round(weather.wind.speed * 3.6)} kph {getDirection(weather.wind.deg)}
             </p>
           </span>
-          {/* <p>visibility: {getDirection(weather.visibility)} km</p> */}
         </div>
       ) : (
         <p></p>

@@ -1,3 +1,5 @@
+// Header styles
+
 .header {
     display: flex;
 
@@ -13,7 +15,7 @@
             color: #ec6e4c;
             font-size: 6.3rem;
             margin: 0 0.1rem 0 0 ;
-            font-family: "Bodoni";
+            font-family: "Bodoni", Times, serif;
             font-weight: normal;
             width: 100%;
     
@@ -33,10 +35,21 @@
             margin-top: 2rem;
             padding-left: 1rem;
             text-transform: uppercase;
-            font-family: 'Josefin Sans',
-            sans-serif;
+            font-family: 'Josefin Sans', sans-serif;
             text-align: left;
             border-left: solid 1px rgb(72, 72, 74, 0.3);
+            span{
+                position: relative;
+                img {
+                    position: absolute;
+                    width: 1.2rem;
+                    z-index: 10;
+                    // stroke: rgb(72, 72, 74);
+                    bottom: 1px;
+                    left: 0.4rem;
+                    
+                }
+            }
         }
     }
 }

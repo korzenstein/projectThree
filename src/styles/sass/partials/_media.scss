@@ -1,3 +1,5 @@
+// Media queries
+
 @media (max-width:1100px) {
     body {
         overflow-y: visible;
@@ -69,8 +71,20 @@
 
         }
     }
+
+    .weatherContainer {
+        align-self: center;
+    }
 }
 
+@media (max-width: 880px) {
+    .main {
+        .frigate {
+            display: none;
+        }
+    }
+    
+}
 
 
 @media (max-width: 670px) {
@@ -98,7 +112,7 @@
         // scroll-behavior: touch;
         flex-wrap: wrap;
         height: 100%;
-        margin-bottom: 3rem;
+        margin-bottom: 5rem;
         gap: 4rem;
     }
 
@@ -108,7 +122,7 @@
 
 
     .form {
-        margin-bottom: 3rem;
+        margin-bottom: 1.3rem;
         order: 0;
 
         label {
