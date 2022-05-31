@@ -114,7 +114,7 @@ function App() {
 
     // API call for Pexels image database
     const getPexel = (term) => {
-      const APIkey = "563492ad6f9170000100000164e2845cbb41412ea75d4386889a4b2b";
+      const APIkey = "563492ad6f91700001000001c6c2def7324b4e4d8e07033d45546233";
       const configPexel = {
         method: "get",
         url: `https://api.pexels.com/v1/search`,
